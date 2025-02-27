@@ -35,6 +35,8 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
+
+        // Size of an Array
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the size of an Array: ");
         int n = sc.nextInt();
@@ -45,10 +47,13 @@ public class QuickSort {
         for(int m=0;m<n;m++){
             A[m] = sc.nextInt();
         }
+
+        // Sorting the array using Quick Sort
         quick(A, 0, n-1);
+        // Printing the sorted Array
         System.out.println();
-        for(int i=0;i<n;i++){
-            System.out.println(A[i]);
+        for(int z=0;z<n;z++){
+            System.out.println(A[z]);
         }
     }
 }
