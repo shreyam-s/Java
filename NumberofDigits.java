@@ -17,5 +17,7 @@ public class NumberofDigits {
             }
             System.out.println("The number of digits are: " + temp);
         }
+
+        sc.close();
     }
 }

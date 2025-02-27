@@ -23,5 +23,7 @@ public class sumOfevenDigitsinArr {
             }
         }
         System.out.print("Sum of even elements in an array: " + sum);
+
+        sc.close();
     }
 }

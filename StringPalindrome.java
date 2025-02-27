@@ -30,6 +30,8 @@ public class StringPalindrome {
     else{
         System.out.println("Pallindrome");
     }
+
+    sc.close();
             
     }
     
