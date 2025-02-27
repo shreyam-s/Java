@@ -57,5 +57,7 @@ public class QuickSort {
         for(int z=0;z<n;z++){
             System.out.println(A[z]);
         }
+        
+        sc.close();
     }
 }

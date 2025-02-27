@@ -37,5 +37,7 @@ public class InsertionSort {
         for(int k=0;k<n;k++){
             System.out.println(arr[k]);
         }
+
+        sc.close();
     }
 }
