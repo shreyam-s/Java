@@ -15,4 +15,21 @@ The code samples cover various fundamental concepts and problem-solving techniqu
 ### Clone the Repository
 ```sh
 git clone https://github.com/shreyam-s/Java.git
+```
 
+### Navigate to the Project Directory
+```sh
+cd Java
+```
+
+### Compile and Run a Java Program
+```sh
+javac ProgramName.java
+java ProgramName
+```
+Replace `ProgramName` with the name of the Java file you wish to execute.
+
+## Contribution
+Contributions are welcome! Feel free to fork the repository, make enhancements, and submit pull requests. 🚀  
+
+For more details and to explore the code, visit the [repository](https://github.com/shreyam-s/Java).
