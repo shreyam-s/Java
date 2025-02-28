@@ -62,11 +62,15 @@ public class MergeSort {
 
         // Sorted the elements using Merge Sort
         Merge(A,0,n-1);
+
         // Printing the elements
-        System.out.println();
-        for(int z=0;z<n;z++){
-            System.out.println(A[z]);
-        }
+        // U can also print sorted array like this
+        // System.out.println();
+        // for(int l=0; l<n; l++){
+        //     System.out.println(arr[l]);
+        // }
+        
+        System.out.println("\nSorted Array: " + Arrays.toString(A));
 
         sc.close();
     }

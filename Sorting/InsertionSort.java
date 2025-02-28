@@ -30,13 +30,16 @@ public class InsertionSort {
         for(int m=0;m<n;m++){
             arr[m] = sc.nextInt();
         }
-
+        // Sort using Insetion Sort
         insertionSort(arr);
 
-        System.out.println();
-        for(int k=0;k<n;k++){
-            System.out.println(arr[k]);
-        }
+        // U can also print sorted array like this
+        // System.out.println();
+        // for(int l=0; l<n; l++){
+        //     System.out.println(arr[l]);
+        // }
+        
+        System.out.println("\nSorted Array: " + Arrays.toString(arr));
 
         sc.close();
     }
