@@ -25,11 +25,11 @@ public class MergeSort {
 
         for(int i=0;i<n1;i++){
             L[i]= A[p+i];
-            L[i+1]=300000;    //Maximum Value of Integer
+            L[i+1] = Integer.MAX_VALUE;    //Maximum Value of Integer
         }
         for(int j=0;j<n2;j++){
             R[j]= A[q+1+j];
-            R[j+1]=300000;    //Maximum Value of Integer
+            R[j+1]= Integer.MAX_VALUE;    //Maximum Value of Integer
         }
 
         int i=0;
