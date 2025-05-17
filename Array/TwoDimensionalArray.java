@@ -16,7 +16,7 @@ public class TwoDimensionalArray {
 
         //col count
         System.out.println(arr[0].length);
-
+ 
         //traversal
         for(int i=0; i<arr.length; i++){  // i-> row no
             for(int j=0; j<arr[0].length; j++){  // j-> col no
