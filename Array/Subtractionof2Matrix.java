@@ -5,48 +5,49 @@ import java.util.Scanner;
 public class Subtractionof2Matrix {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        //input dimension of matrix
-        System.out.print("Enter the no of rows: ");
+        System.out.print("Enter the size of 1st matrix: ");
         int rows = sc.nextInt();
-        System.out.print("Enter the no of columns: ");
+        System.out.print("Eneter the size of 2nd matrix: ");
         int cols = sc.nextInt();
 
-        int mat1[][] = new int[rows][cols];
-        int mat2[][] = new int[rows][cols];
-        int diff[][] = new int[rows][cols];
+        System.out.println("Enter 1st Matrix:");
+        int[][] mat1 = inputMatrix(rows, cols, sc);
+        System.out.println("Enter 2nd Matrix:");
+        int[][] mat2 = inputMatrix(rows, cols, sc);
 
-        //input elements of 1 matrix
-        System.out.println("Elements for 1sr matrix: ");
-        for(int i = 0; i < rows; i++){
-            for(int j = 0; j < cols; j++){
-                mat1[i][j] = sc.nextInt();
+        int[][] diff = subtractMatrix(mat1, mat2);
+        System.out.println("Difference of the two matrices:");
+        printMatrix(diff);
+    }
+
+    static int[][] inputMatrix(int rows, int cols, Scanner sc) {
+        int[][] mat = new int[rows][cols];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                mat[i][j] = sc.nextInt();
             }
         }
+        return mat;
+    }
 
-        //input for 2 matrix
-        System.out.println("Elements for 2nd matrix: ");
-        for(int i = 0; i < rows; i++){
-            for(int j = 0; j < cols; j++){
-                mat2[i][j] = sc.nextInt();
-            }
-        }
-
-        //sum
-        for(int i = 0; i < rows; i++){
-            for(int j = 0; j < cols; j++){
-                diff[i][j] = mat1[i][j] - mat2[i][j];
-            }
-        }
-
-        //print the sum matrix
-        System.out.println("Sum of mat1 and mat2 is: ");
-        for(int i = 0; i < rows; i++){
-            for(int j = 0; j < cols; j++){
-                System.out.print(diff[i][j] + " ");
+    static void printMatrix(int[][] mat) {
+        for (int i = 0; i < mat.length; i++) {
+            for (int j = 0; j < mat[0].length; j++) {
+                System.out.print(mat[i][j] + " ");
             }
             System.out.println();
         }
+    }
 
-        sc.close();
+    static int[][] subtractMatrix(int[][] mat1, int[][] mat2) {
+        int rows = mat1.length;
+        int cols = mat1[0].length;
+        int[][] diff = new int[rows][cols];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                diff[i][j] = mat1[i][j] - mat2[i][j];
+            }
+        }
+        return diff;
     }
 }
