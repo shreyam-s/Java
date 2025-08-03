@@ -5,48 +5,58 @@ import java.util.Scanner;
 public class SumofTwoMatrix {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        //input dimension of matrix
-        System.out.print("Enter the no of rows: ");
+        System.out.print("Enter the size of 1st matrix: ");
         int rows = sc.nextInt();
-        System.out.print("Enter the no of columns: ");
+        System.out.print("Eneter the size of 2nd matrix: ");
         int cols = sc.nextInt();
 
-        int mat1[][] = new int[rows][cols];
-        int mat2[][] = new int[rows][cols];
-        int sum[][] = new int[rows][cols];
-
-        //input elements of 1 matrix
-        System.out.println("Elements for 1sr matrix: ");
-        for(int i = 0; i < rows; i++){
-            for(int j = 0; j < cols; j++){
-                mat1[i][j] = sc.nextInt();
-            }
+        if (rows <= 0 || cols <= 0) {
+            System.out.println("Matrix size must be positive integers.");
+            return;
+        }
+        if (rows != cols) {
+            System.out.println("Both matrices must have the same dimensions for addition.");
+            return;
         }
 
-        //input for 2 matrix
-        System.out.println("Elements for 2nd matrix: ");
-        for(int i = 0; i < rows; i++){
-            for(int j = 0; j < cols; j++){
-                mat2[i][j] = sc.nextInt();
+        System.out.println("Enter 1st Matrix:");
+        int[][] mat1 = inputMatrix(rows, cols, sc);
+        System.out.println("Enter 2nd Matrix:");
+        int[][] mat2 = inputMatrix(rows, cols, sc);
+
+        int[][] sum = addMatrix(mat1, mat2);
+        System.out.println("Sum of the two matrices:");
+        printMatrix(sum);
+    }
+
+    static int[][] inputMatrix(int rows, int cols, Scanner sc) {
+        int[][] mat = new int[rows][cols];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                mat[i][j] = sc.nextInt();
             }
         }
+        return mat;
+    }
 
-        //sum
-        for(int i = 0; i < rows; i++){
-            for(int j = 0; j < cols; j++){
-                sum[i][j] = mat1[i][j] + mat2[i][j];
-            }
-        }
-
-        //print the sum matrix
-        System.out.println("Sum of mat1 and mat2 is: ");
-        for(int i = 0; i < rows; i++){
-            for(int j = 0; j < cols; j++){
-                System.out.print(sum[i][j] + " ");
+    static void printMatrix(int[][] mat) {
+        for (int i = 0; i < mat.length; i++) {
+            for (int j = 0; j < mat[0].length; j++) {
+                System.out.print(mat[i][j] + " ");
             }
             System.out.println();
         }
+    }
 
-        sc.close();
+    static int[][] addMatrix(int[][] mat1, int[][] mat2) {
+        int rows = mat1.length;
+        int cols = mat1[0].length;
+        int[][] sum = new int[rows][cols];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                sum[i][j] = mat1[i][j] + mat2[i][j];
+            }
+        }
+        return sum;
     }
 }
