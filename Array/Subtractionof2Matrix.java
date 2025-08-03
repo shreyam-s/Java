@@ -7,17 +7,8 @@ public class Subtractionof2Matrix {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the size of 1st matrix: ");
         int rows = sc.nextInt();
-        System.out.print("Eneter the size of 2nd matrix: ");
+        System.out.print("Enter the size of 2nd matrix: ");
         int cols = sc.nextInt();
-
-        if (rows <= 0 || cols <= 0) {
-            System.out.println("Matrix size must be positive integers.");
-            return;
-        }
-        if (rows != cols) {
-            System.out.println("Both matrices must have the same dimensions for addition.");
-            return;
-        }
 
         System.out.println("Enter 1st Matrix:");
         int[][] mat1 = inputMatrix(rows, cols, sc);
