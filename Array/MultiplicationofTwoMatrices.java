@@ -52,7 +52,7 @@ public class MultiplicationofTwoMatrices {
     static int[][] multiplyMatrices(int[][] mat1, int[][] mat2) {
         int rows1 = mat1.length;
         int cols1 = mat1[0].length;
-        int rows2 = mat2.length;
+        // int rows2 = mat2.length; //optional, not used..
         int cols2 = mat2[0].length;
         int[][] result = new int[rows1][cols2];
         for (int i = 0; i < rows1; i++) {

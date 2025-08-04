@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class BestParkSchedule {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter Person (A,B,C,D,E) : ");
@@ -10,46 +10,42 @@ public class BestParkSchedule {
         System.out.print("Enter Park (P,Q,R,S) : ");
         String park = sc.nextLine();
 
-        if(person.equals("A")){
-            if(park.equals("P") || park.equals("Q") || park.equals("R") || park.equals("S")){
+        if (person.equals("A")) {
+            if (park.equals("P") || park.equals("Q") || park.equals("R") || park.equals("S")) {
                 System.out.println("Allowed to visit");
-            }else {
-                System.out.println("Not Allowed to visit");
-                return;
-    }
-        }
-        else if(person.equals("B")){
-            if(park.equals("Q") || park.equals("R") || park.equals("S")){
-                System.out.println("Allowed to visit");
-            }else{
+            } else {
                 System.out.println("Not Allowed to visit");
                 return;
             }
-        }
-        else if(person.equals("C")){
-            if(park.equals("R") || park.equals("S")){
+        } else if (person.equals("B")) {
+            if (park.equals("Q") || park.equals("R") || park.equals("S")) {
                 System.out.println("Allowed to visit");
-            }else{
+            } else {
                 System.out.println("Not Allowed to visit");
                 return;
             }
-        }
-        else if(person.equals("D")){
-            if(park.equals("P") || park.equals("Q") || park.equals("R")){
+        } else if (person.equals("C")) {
+            if (park.equals("R") || park.equals("S")) {
                 System.out.println("Allowed to visit");
-            }else{
+            } else {
                 System.out.println("Not Allowed to visit");
                 return;
             }
-        }
-        else if(person.equals("E")){
-            if(park.equals("R") || park.equals("S")){
+        } else if (person.equals("D")) {
+            if (park.equals("P") || park.equals("Q") || park.equals("R")) {
                 System.out.println("Allowed to visit");
-            }else{
+            } else {
                 System.out.println("Not Allowed to visit");
                 return;
             }
-        }else{
+        } else if (person.equals("E")) {
+            if (park.equals("R") || park.equals("S")) {
+                System.out.println("Allowed to visit");
+            } else {
+                System.out.println("Not Allowed to visit");
+                return;
+            }
+        } else {
             System.out.println("Invalid Person Entered.");
             return;
         }
@@ -62,16 +58,13 @@ public class BestParkSchedule {
         int Package = sc.nextInt();
 
         int costMember = 0;
-        if(Package == 1){
+        if (Package == 1) {
             costMember = 100;
-        }
-        else if(Package == 2){
+        } else if (Package == 2) {
             costMember = 50;
-        }
-        else if(Package == 3){
+        } else if (Package == 3) {
             costMember = 80;
-        }
-        else{
+        } else {
             System.out.print("Invalid package choice.");
             return;
         }
@@ -97,5 +90,6 @@ public class BestParkSchedule {
         System.out.println("\nTotal Cost before discount: ₹" + total);
         System.out.println("Discount: " + (discount * 100) + "%");
         System.out.println("Final Cost: ₹" + finalCost);
+        sc.close();
     }
 }
